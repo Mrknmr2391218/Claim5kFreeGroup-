@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+        .blog-post {
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            text-align: left;
+        }
+        .blog-post img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+        /* Pop-up Styling */
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            border: 2px solid #f57224;
+            padding: 15px;
+            z-index: 1000;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        .popup img {
+            width: 250px;
+            max-width: 100%;
+        }
+        .close-btn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        /* Claim Free 5K Group Button */
+        .claim-btn {
+            background: #f57224;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .claim-btn:hover {
+            background: #d45b1f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <img src="pic/banner.jpg" alt="Environment Banner" class="banner">
+
+    <div class="container">
+        <h1>🌱 Save Our Environment 🌍</h1>
+
+        <!-- Environment Blog Post -->
+        <div class="blog-post">
+            <h2>The Importance of Environmental Conservation</h2>
+            <p><strong>Date: February 10, 2025</strong></p>
+            <img src="pic/environment.jpg" alt="Nature Conservation">
+            <p>
+                The environment is our home, providing us with air, water, and resources for survival. However, human activities such as deforestation, pollution, and overconsumption are endangering our planet.
+            </p>
+            <p>
+                <strong>Climate change</strong> is one of the biggest threats we face today. Rising global temperatures lead to extreme weather conditions, melting ice caps, and loss of biodiversity. If we don't take action now, future generations may not have a habitable Earth.
+            </p>
+            <p>
+                We can protect the environment through simple steps: reducing waste, conserving water, planting trees, and supporting renewable energy. Small changes in our daily lives can have a big impact on the planet.
+            </p>
+            <p>
+                Let’s work together to create a sustainable future. Every action counts! 🌍💚
+            </p>
+        </div>
+
+        <!-- Claim Free 5K Group Button -->
+        <a id="claimButton" class="claim-btn" onclick="claimGroup()">🎁 Claim Free 5K Group</a>
+    </div>
+
+    <!-- Shopee Ad Pop-up -->
+    <div class="popup" id="shopeePopup">
+        <a href="https://s.shopee.com.my/5ptDTKxNL8" target="_blank">
+            <img src="pic/shopee.jpg" alt="Shopee Ad">
+        </a>
+        <button class="close-btn" onclick="document.getElementById('shopeePopup').style.display='none'">Close</button>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Environment Blog - All Rights Reserved
+    </div>
+
+    <script>
+        function claimGroup() {
+            // Buka pop-up iklan Shopee (anti-block)
+            let popup = document.getElementById("shopeePopup");
+            popup.style.display = "block";
+
+            // Gunakan tab baru untuk mengelakkan pop-up block
+            let shopeeWin = window.open("https://s.shopee.com.my/20gUtzoRRo", "_blank");
+
+            // Buka link ke aplikasi selepas klik (gunakan timeout untuk memberi masa pop-up muncul)
+            setTimeout(function() {
+                window.location.href = "https://t.me/+k7F_uX7425c1YmRl"; // Tukar dengan link aplikasi sebenar
+            }, 1000); // Delay 1s supaya pop-up muncul dahulu
+
+            // Jika pop-up tidak dibuka, buka secara manual dalam tab lain
+            if (!shopeeWin || shopeeWin.closed || typeof shopeeWin.closed == 'undefined') {
+                window.open("https://s.shopee.com.my/vQWVrU15", "_blank");
+            }
+        }
+    </script>
+
+</body>
+</html>
